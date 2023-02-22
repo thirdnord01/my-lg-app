@@ -94,7 +94,7 @@ function handleSubmit(event) {
 }
 
 function sendData(data) {
-    fetch('http://localhost:5050/connection', {
+    fetch('https://coral-jackrabbit-toga.cyclic.app/connection', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
