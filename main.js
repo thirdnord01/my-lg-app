@@ -99,7 +99,7 @@ function handleSubmit(event) {
 }
 
 function sendData(data) {
-    fetch('https://coral-jackrabbit-toga.cyclic.app/connection', {
+    fetch('https://odd-moccasins-ox.cyclic.app/connection', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
